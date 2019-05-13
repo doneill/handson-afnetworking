@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC363FB2E8D92BA4B7D5FCFE /* libPods-howto-afnetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8EABDE3F03E4210D9FFB0F /* libPods-howto-afnetworking.a */; };
 		D9AF03C72288CCC9002D7388 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D9AF03C62288CCC9002D7388 /* AppDelegate.m */; };
 		D9AF03CA2288CCC9002D7388 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9AF03C92288CCC9002D7388 /* ViewController.m */; };
 		D9AF03CD2288CCC9002D7388 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9AF03CB2288CCC9002D7388 /* Main.storyboard */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A8EABDE3F03E4210D9FFB0F /* libPods-howto-afnetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-howto-afnetworking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A7B1019E0213C29B6BE09F4 /* Pods-howto-afnetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-howto-afnetworking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-howto-afnetworking/Pods-howto-afnetworking.debug.xcconfig"; sourceTree = "<group>"; };
+		D05BA574FE3B560874209141 /* Pods-howto-afnetworking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-howto-afnetworking.release.xcconfig"; path = "Pods/Target Support Files/Pods-howto-afnetworking/Pods-howto-afnetworking.release.xcconfig"; sourceTree = "<group>"; };
 		D9AF03C22288CCC9002D7388 /* howto-afnetworking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "howto-afnetworking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9AF03C52288CCC9002D7388 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D9AF03C62288CCC9002D7388 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC363FB2E8D92BA4B7D5FCFE /* libPods-howto-afnetworking.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31A0AE5E12F4CE7F6B2B8A94 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A7B1019E0213C29B6BE09F4 /* Pods-howto-afnetworking.debug.xcconfig */,
+				D05BA574FE3B560874209141 /* Pods-howto-afnetworking.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B92010D29ACD47BBB27E5E6F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A8EABDE3F03E4210D9FFB0F /* libPods-howto-afnetworking.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D9AF03B92288CCC9002D7388 = {
 			isa = PBXGroup;
 			children = (
 				D9AF03C42288CCC9002D7388 /* howto-afnetworking */,
 				D9AF03C32288CCC9002D7388 /* Products */,
+				31A0AE5E12F4CE7F6B2B8A94 /* Pods */,
+				B92010D29ACD47BBB27E5E6F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +102,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9AF03D82288CCCB002D7388 /* Build configuration list for PBXNativeTarget "howto-afnetworking" */;
 			buildPhases = (
+				02CBAF0429FAC8DF5D300843 /* [CP] Check Pods Manifest.lock */,
 				D9AF03BE2288CCC9002D7388 /* Sources */,
 				D9AF03BF2288CCC9002D7388 /* Frameworks */,
 				D9AF03C02288CCC9002D7388 /* Resources */,
@@ -135,6 +160,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02CBAF0429FAC8DF5D300843 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-howto-afnetworking-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D9AF03BE2288CCC9002D7388 /* Sources */ = {
@@ -283,6 +333,7 @@
 		};
 		D9AF03D92288CCCB002D7388 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A7B1019E0213C29B6BE09F4 /* Pods-howto-afnetworking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +351,7 @@
 		};
 		D9AF03DA2288CCCB002D7388 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D05BA574FE3B560874209141 /* Pods-howto-afnetworking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
